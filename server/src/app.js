@@ -3,15 +3,17 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
 
+const config = require('./config/config')
+const port = process.env.PORT || 8081
+
+config.db()
 const app = express()
-app.use(morgan('combined'))
+app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.post('/register', (req, res) => {
-  res.send({
-    message: `Hello ${req.body.email} Your user was registred. Have fun!`
-  })
-})
+require('./routes/User')(app)
 
-app.listen(process.env.PORT || 8081)
+app.listen(port, () => {
+  console.log('Server is running on', port)
+})

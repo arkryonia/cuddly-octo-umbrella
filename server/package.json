@@ -4,15 +4,21 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/nodemon src/app.js --exec 'npm run lint && node'",
+    "dev": "./node_modules/.bin/nodemon src/app.js --exec 'npm run lint && node'",
     "lint": "./node_modules/.bin/eslint **/*.js"
   },
   "author": "Hodonou Sounton",
   "license": "MIT",
   "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "eslint": "^4.6.1",
     "express": "^4.15.4",
+    "joi": "^10.6.0",
+    "jsonwebtoken": "^8.0.1",
+    "mongoose": "^4.11.10",
     "morgan": "^1.8.2",
     "nodemon": "^1.12.0"
   },
