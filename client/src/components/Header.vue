@@ -17,13 +17,19 @@
     <v-toolbar-items>
 
       <router-link to="login">
-        <v-btn flat dark class="white--text">
+        <v-btn
+          v-if="!$store.state.isUserLoggedIn"
+          flat 
+          dark 
+          class="white--text">
           Login
         </v-btn>
       </router-link>
       
       <router-link to="register">
-        <v-btn flat dark class="white--text">
+        <v-btn
+        v-if="!$store.state.isUserLoggedIn"
+        flat dark class="white--text">
           Sign Up
         </v-btn>
       </router-link>
