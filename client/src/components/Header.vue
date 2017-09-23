@@ -5,13 +5,16 @@
         Tecnonia
       </span>
     </v-toolbar-title>
-      
-    <!-- TODO implement -->
-    <!-- <v-toolbar-items>
-        <v-btn flat dark class="white--text">
-          Browse
-        </v-btn>
-      </v-toolbar-items> -->
+    
+    <v-toolbar-items>
+      <v-btn
+        @click="navigateTo({ name: 'songs'})"
+        flat 
+        dark 
+        class="white--text">
+        Browse
+      </v-btn>
+    </v-toolbar-items>
 
     <v-spacer></v-spacer>
 
