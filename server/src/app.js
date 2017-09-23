@@ -13,6 +13,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 require('./routes/User')(app)
+require('./routes/Song')(app)
 
 app.listen(port, () => {
   console.log('Server is running on', port)

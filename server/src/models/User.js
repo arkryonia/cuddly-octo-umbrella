@@ -10,14 +10,6 @@ const UserSchema = new Schema({
 })
 
 /*eslint-disable */
-// UserSchema.pre('save', (done) => {
-//   let user = this
-//   if (!user.isModified('password')) return done()
-//   const hash = bcrypt.hashSync(this.password)
-//   user.password = hash
-//   console.log(this.password)
-//   return done()
-// })
 
 UserSchema.methods.hash = function (password) {
   return bcrypt.hashSync(password)
